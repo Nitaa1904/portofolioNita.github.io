@@ -1,0 +1,408 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #262642 !important;
+  color: #f2f2f2 !important;
+  padding-top: 56px;
+}
+body h1 {
+  font-size: 50px;
+  font-weight: bold; /* Nilai font-weight untuk tebal ekstra */
+}
+body h2 {
+  font-size: 40px;
+  font-weight: bold; /* Nilai font-weight untuk tebal ekstra */
+}
+body h4 {
+  font-size: 20px;
+}
+body p {
+  font-size: 18px;
+}
+.navbar-custom {
+  background-color: #191a2e;
+}
+.navbar-custom .nav-link {
+  position: relative;
+  color: #fff; /* Gaya warna teks default */
+  transition: all 0.3s ease;
+  padding: 20px;
+}
+
+.navbar-custom .nav-link:hover {
+  font-weight: bold;
+  color: #a40b0b; /* Mengubah warna teks saat hover */
+}
+
+.navbar-custom .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #a40b0b;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover::after {
+  width: 100%;
+  left: 0;
+  background: #a40b0b;
+}
+
+.navbar-custom .navbar-nav .dropdown-menu {
+  background-color: #a40b0b;
+}
+.navbar-custom .navbar-nav .dropdown-menu .dropdown-item {
+  color: white;
+}
+.navbar-custom .navbar-nav .dropdown-menu .dropdown-item:hover {
+  background-color: #2e2f45;
+}
+
+.introduction .custom-hr {
+  border: 4px solid #a40b0b; /* Menetapkan border dengan warna #A40B0B dan ketebalan 4px */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Menetapkan efek drop shadow */
+}
+.sosial-media ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.sosial-media-item {
+  margin: 0 10px;
+}
+
+.sosial-media-link {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  color: #f2f2f2;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.sosial-media-link:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.1); /* Membesar sedikit saat dihover */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+}
+
+.sosial-media-link img {
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.sosial-media-link:hover img {
+  transform: rotate(360deg); /* Memutar ikon saat dihover */
+}
+
+.sosial-media .active {
+  background-color: #3b5998;
+  color: #fff;
+}
+
+.sosial-media .active:hover {
+  background-color: #3b5998;
+}
+
+.sosial-media .active img {
+  filter: brightness(0) invert(1);
+}
+
+.container {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  display: block; /* Pastikan konten non-teks adalah blok */
+  position: relative;
+}
+
+.gambar-profile {
+  position: absolute;
+  top: 182px; /* Menggeser ke posisi y 199px */
+  left: 150px; /* Menggeser ke posisi x 350px */
+  width: 100%; /* Sesuaikan dengan kebutuhan lebar kontainer */
+  max-width: 400px; /* Atau tetapkan ukuran maksimum yang diinginkan */
+}
+
+.gambar-profile img {
+  width: 400px; /* Gambar akan menyesuaikan dengan lebar kontainer induknya */
+  height: auto; /* Menjaga rasio aspek gambar */
+  display: block; /* Menghilangkan celah di bawah gambar jika menggunakan inline-block */
+  filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
+}
+.gambar-profile img:hover {
+  transform: scale(1.1);
+}
+
+.nama {
+  position: absolute;
+  top: 100px; /* Atur posisi vertikal teks */
+  left: 20px; /* Atur posisi horizontal teks */
+  z-index: 2; /* Tumpukan di atas gambar */
+}
+
+.content-introduction {
+  margin-top: 230px;
+  margin-left: 100px;
+  padding-bottom: 33px;
+}
+/* CSS untuk elemen content-introduction */
+.skill {
+  background-color: #191a2e;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skill .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.skill-deskripsi {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.skill-item img:hover {
+  transform: scale(1.6);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+/* Gaya tambahan */
+.skill-item {
+  margin-bottom: 20px; /* Jarak antara setiap gambar */
+  text-align: center; /* Untuk membuat gambar menjadi pusat di dalam kolom */
+  gap: 20px;
+}
+
+.skill-item img {
+  border-radius: 25%;
+  max-width: 100%; /* Gambar akan menyesuaikan ukuran maksimal kolom */
+  height: 100px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service {
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.service .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.service .text-right {
+  text-align: right;
+}
+.service .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.service .card {
+  flex: 1 1 calc(34.333% - 25x); /* Adjust the width of the cards */
+  max-width: calc(34.333% - 25px);
+  box-sizing: border-box;
+  background-color: #191a2e;
+  color: #fff;
+}
+/* service */
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Mengatur konten secara horizontal ke tengah */
+  align-items: center; /* Mengatur konten secara vertikal ke tengah */
+  height: 100%;
+  text-align: center;
+}
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card-container {
+  gap: 40px; /* Adds space between cards */
+  padding: 20px; /* Optional: Adds padding around the container */
+}
+
+/* Optional: Custom scrollbar styles */
+.card-container::-webkit-scrollbar {
+  height: 10px;
+}
+.card-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+.card-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.card-body {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.card-body .btn {
+  margin-top: auto;
+}
+
+.projek {
+  height: 800px;
+  background-color: #191a2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projek .card {
+  background-color: #262642;
+  color: white;
+}
+.projek .row {
+  justify-content: center; /* Untuk mengatur elemen dalam baris di tengah secara horizontal */
+}
+
+.projek .col {
+  margin-bottom: 20px; /* Spasi antar kolom */
+}
+.projek .btn-transparent {
+  background-color: transparent;
+  border: 2px solid #a40b0b;
+  color: #a40b0b;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.projek .btn-transparent:hover {
+  background-color: #a40b0b;
+  color: white;
+}
+.content-section {
+  display: none;
+}
+.active {
+  display: block;
+}
+.story {
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.story .row {
+  justify-content: center; /* Untuk mengatur elemen dalam baris di tengah secara horizontal */
+}
+
+.story .col {
+  margin-bottom: 20px; /* Spasi antar kolom */
+}
+.story .btn-transparent {
+  background-color: transparent;
+  border: 2px solid #a40b0b;
+  color: #a40b0b;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.story .btn-transparent:hover {
+  background-color: #a40b0b;
+  color: white;
+}
+.projek .scrollable {
+  max-height: 400px; /* Adjust this height as needed */
+  overflow-y: auto;
+}
+
+.story .scrollable {
+  max-height: 400px; /* Adjust this height as needed */
+  overflow-y: auto;
+}
+.footer {
+  background-color: #191a2e !important;
+  padding: 20px 0;
+}
+.footer h2 {
+  margin-bottom: 20px;
+}
+.footer p {
+  margin-bottom: 10px;
+}
+.footer .text-link {
+  color: inherit; /* Warna teks mengikuti warna elemen induk */
+  text-decoration: none; /* Menghapus garis bawah default */
+  font-weight: normal; /* Setelan berat font seperti teks biasa */
+  cursor: pointer; /* Menambahkan kursor pointer */
+  margin: 0 10px;
+}
+
+.footer .text-link:hover {
+  text-decoration: underline; /* Menambahkan garis bawah saat dihover */
+}
+
+/* CSS untuk elemen content-introduction */
+.content-introduction h4,
+.content-introduction h2,
+.content-introduction p,
+.nama h1,
+.skill-deskripsi h2,
+.service h2,
+.projek h2,
+.story h2,
+.isi h4,
+.isi h6 {
+  transition: all 0.3s ease; /* Menambahkan transisi halus */
+}
+
+.content-introduction h4:hover,
+.content-introduction h2:hover,
+.nama h1:hover,
+.skill-deskripsi h2:hover,
+.service h2:hover,
+.projek h2:hover,
+.story h2:hover,
+.isi h4:hover,
+.isi h6:hover {
+  color: #a40b0b; /* Mengubah warna teks saat dihover */
+  transform: translateY(-5px); /* Mengangkat teks sedikit */
+}
+
+.content-introduction .btn-danger,
+.btn.btn-transparent {
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.btn-danger:hover,
+.btn.btn-transparent:hover {
+  background-color: #a40b0b; /* Mengubah warna background tombol saat dihover */
+  transform: scale(1.05); /* Membesarkan tombol sedikit */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+}
+
+.nama h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.bold-text {
+  font-weight: bold;
+}
