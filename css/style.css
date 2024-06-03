@@ -141,9 +141,6 @@ body p {
   display: block; /* Menghilangkan celah di bawah gambar jika menggunakan inline-block */
   filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
 }
-.gambar-profile img:hover {
-  transform: scale(1.1);
-}
 
 .nama {
   position: absolute;
